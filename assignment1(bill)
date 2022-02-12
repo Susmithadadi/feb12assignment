@@ -1,0 +1,53 @@
+hhp=400
+dp=200
+oils=2000
+grains=500
+cname=input('enter customer name')
+cphno=int(input('enter custmoer phone number'))
+hhpq=int(input('enter no.of hhp products'))
+dpq=int(input('enter no.of dpq products'))
+oilsq=int(input('enter no. of oil pactes'))
+grainsq=int(input('enter no.of  grains products '))
+cc=input('enter cupon code')
+bill=(hhp*hhpq)+(dp*dpq)+(oils*oilsq)+(grains*grainsq)
+print('total bill',bill)
+if bill>5000:
+    if cc=='enjoy':
+        disc=bill*10/100
+        tax=0
+elif bill>3000:
+    if(cc=='lucky'):
+        disc=bill*8/100
+        tax=bill*10/100
+elif bill>2000:
+    if(cc== 'lucky'):
+        disc=bill*5/100
+        tax=bill*10/100
+elif bill>1000:
+       if(cc=='enjoy'):
+        disc=bill*3/100
+        tax=bill*12/100
+else:
+    print('invaild coupn code')
+    mainbill=bill-disc*tax
+    print('bill amount:',mainbill)
+    
+  
+output
+enter customer name
+susmitha
+enter custmoer phone number
+12345678
+enter no.of hhp products
+6
+enter no.of dpq products
+9
+enter no. of oil pactes
+7
+enter no.of  grains products 
+9
+enter cupon code
+lucky
+total bill 22700
+
+
